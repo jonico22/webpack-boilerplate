@@ -15,7 +15,7 @@ export default webpackMerge(webpackConfigBase, {
     app: [
       'eventsource-polyfill', // IE HMR fix
       `webpack-hot-middleware/client?reload=true&path=${externalPath}__webpack_hmr`, // HMR works calling js from external server
-      path.join(projectRootPath, 'src/app/static.js'),
+      path.join(projectRootPath, 'src/build/static.js'),
       path.join(projectRootPath, 'src/app/main.js')
     ]
   },
@@ -46,7 +46,7 @@ export default webpackMerge(webpackConfigBase, {
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(projectRootPath, 'src/index.html'),
-      inject: true
+      inject: 'head'
     }),
     new BrowserSyncPlugin({
       port: BROWSER_SYNC_PORT,

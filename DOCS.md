@@ -39,4 +39,4 @@ In production, the pug templates are compiled to html files by [static-site-gene
 Update the following files:
 
 * `build/routes.js`
-* `src/app/static.js`
+* `src/build/routes.js`
