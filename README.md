@@ -2,6 +2,10 @@
 
 > Start your next project using technologies that you love
 
+This boilerplate is focused for works with multiples pug pages.
+
+![demo](https://drive.google.com/uc?export=download&id=0BwM5_eez3JnoUjZfZXRnV21pM1k)
+
 ## Features
 
 * [Pug](https://pugjs.org)
@@ -29,7 +33,7 @@ In development if you are working with a backend like [Laravel](https://laravel.
 
 ```html
 ...
-<script src="http:/[localhost|ip]:8080/app.js"></script>
+<script src="http:/[localhost|ip]:[port]/app.js"></script>
 ...
 ```
 

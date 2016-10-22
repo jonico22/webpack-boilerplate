@@ -40,3 +40,7 @@ Update the following files:
 
 * `build/routes.js`
 * `src/build/routes.js`
+
+## Troubleshooting
+
+* On each HMR from pug files, the body will be replaced by the new html (generated)
