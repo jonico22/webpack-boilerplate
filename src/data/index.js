@@ -1,4 +1,5 @@
 export default {
   env: process.env.NODE_ENV,
-  msg: 'Hello World'
+  debug: process.env.NODE_ENV === 'development',
+  msg: 'DS'
 }

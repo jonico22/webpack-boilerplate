@@ -4,9 +4,11 @@ html(lang='es')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title {{ name }}
-    link(href='/static/css/app.css', rel='stylesheet')
+    if !debug
+      link(href='/static/css/app.css', rel='stylesheet')
   body
     #root
       block content
-    script(src='/static/js/vendor.js')
-    script(src='/static/js/app.js')
+    if !debug
+      script(src='/static/js/vendor.js')
+      script(src='/static/js/app.js')
