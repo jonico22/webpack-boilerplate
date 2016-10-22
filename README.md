@@ -4,9 +4,10 @@
 
 ## Features
 
+* [Pug](https://pugjs.org)
 * [HMR](https://webpack.github.io/docs/hot-module-replacement.html)
 * [ESLint](http://eslint.org/)
-* [ES2015](https://babeljs.io/docs/plugins/preset-es2015/)
+* [ES2015](https://babeljs.io/docs/plugins/preset-es2015/) + [stage-3](https://babeljs.io/docs/plugins/preset-stage-3/)
 * [SASS](http://sass-lang.com/)
 * [PostCSS](https://github.com/postcss/postcss)
 * [BrowserSync](https://www.browsersync.io/)

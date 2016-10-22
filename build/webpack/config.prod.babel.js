@@ -1,6 +1,5 @@
 import webpack from 'webpack'
 import webpackMerge from 'webpack-merge'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import path from 'path'
 
@@ -42,12 +41,6 @@ export default webpackMerge(webpackConfigBase, {
       }
     }),
     new ExtractTextPlugin('static/css/[name].css'),
-    new HtmlWebpackPlugin({
-      template: path.join(projectRootPath, 'src/index.html'),
-      inject: true,
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
-    }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -59,12 +52,6 @@ export default webpackMerge(webpackConfigBase, {
           module.resource.indexOf(path.join(projectRootPath, 'node_modules')) === 0
         )
       }
-    }),
-    // extract webpack runtime and module manifest to its own file in order to
-    // prevent vendor hash from being updated whenever app bundle is updated
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      chunks: ['vendor']
     })
   ]
 })

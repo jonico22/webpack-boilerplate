@@ -13,6 +13,7 @@ export default {
     alias: {
       'src': path.join(projectRootPath, 'src'),
       'app': path.join(projectRootPath, 'src/app'),
+      'views': path.join(projectRootPath, 'src/views'),
       'styles': path.join(projectRootPath, 'src/styles')
     },
     modulesDirectories: ['node_modules', 'shared']
@@ -32,6 +33,14 @@ export default {
         loader: 'babel-loader',
         include: projectRootPath,
         exclude: /node_modules/
+      }, {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        include: projectRootPath,
+        exclude: /node_modules/
+      }, {
+        test: /\.json/,
+        loader: 'json-loader'
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
