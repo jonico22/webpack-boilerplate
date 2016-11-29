@@ -1,3 +1,6 @@
+> ## DEPRECATED
+> I recommend follow this [guide](https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md), and if you need to work with multiples pages use [html-webpack-harddisk-plugin](https://github.com/jantimon/html-webpack-harddisk-plugin) 
+
 # Base webpack
 
 > Start your next project using technologies that you love
